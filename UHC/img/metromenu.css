@@ -1,0 +1,154 @@
+/* ================================================================ 
+This copyright notice must be kept untouched in the stylesheet at 
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/cssplay-metromenu.html
+Copyright (c) Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+.container {width:300px; height:400px; margin:30px 0; -webkit-tap-highlight-color: rgba(0,0,0,0); position:relative; z-index:100;}
+.metroMenu {width:300px; height:400px; position:relative;}
+.metroMenu ul.options {padding:0; margin:0; list-style:none; width:300px; height:400px; overflow:hidden;}
+.metroMenu ul.options li {float:left; margin:0 10px 10px 0}
+.metroMenu input.metro {display:none; position:absolute;}
+.metroMenu label.metro,
+.metroMenu label.metro + label {display:block; position:relative; width:100%; height:100%; cursor:pointer;}
+.metroMenu .s11 {width:90px; height:90px;}
+.metroMenu .s21 {width:190px; height:90px;}
+.metroMenu .s22 {width:190px; height:190px;}
+
+.metroMenu label.metro span {display:block; width:100%; position:absolute; left:0; bottom:0; font:400 11px/25px 'PT Sans', arial, sans-serif; color:#fff; text-indent:10px;}
+
+
+.metroMenu ul.options li label.close {display:none; background:rgba(255,255,255,0.2) url(selected.png) no-repeat right top; margin-top:-90px;}
+.metroMenu ul.options li.s22 label.close {margin-top:-190px;}
+
+.metroMenu ul.options li:nth-of-type(1) {background:#38e url(student_group.png) no-repeat center 40px;}
+.metroMenu ul.options li:nth-of-type(2) {background:#a05 url(m2.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(3) {background:#837 url(m3.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(4) {background:#f80 url(m4.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(5) {background:#e10 url(m5.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(6) {background:#164 url(m6.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(7) {background:#222 url(m1.png) no-repeat center -10px;}
+.metroMenu ul.options li:nth-of-type(8) {background:#990 url(m9.png) no-repeat center -10px;}
+
+.metroMenu #mm1:not(:checked) ~ ul.options li:nth-of-type(1):hover label:first-child:before,
+.metroMenu #mm2:not(:checked) ~ ul.options li:nth-of-type(2):hover label:first-child:before,
+.metroMenu #mm3:not(:checked) ~ ul.options li:nth-of-type(3):hover label:first-child:before,
+.metroMenu #mm4:not(:checked) ~ ul.options li:nth-of-type(4):hover label:first-child:before,
+.metroMenu #mm5:not(:checked) ~ ul.options li:nth-of-type(5):hover label:first-child:before,
+.metroMenu #mm6:not(:checked) ~ ul.options li:nth-of-type(6):hover label:first-child:before,
+.metroMenu #mm7:not(:checked) ~ ul.options li:nth-of-type(7):hover label:first-child:before,
+.metroMenu #mm8:not(:checked) ~ ul.options li:nth-of-type(8):hover label:first-child:before {content:""; display:block; width:100%; height:100%; background:rgba(255,255,255,0.2); position:absolute; left:0; top:0;}
+
+.metroMenu #mm1:checked ~ ul.options li:nth-of-type(1) label.close,
+.metroMenu #mm2:checked ~ ul.options li:nth-of-type(2) label.close,
+.metroMenu #mm3:checked ~ ul.options li:nth-of-type(3) label.close,
+.metroMenu #mm4:checked ~ ul.options li:nth-of-type(4) label.close,
+.metroMenu #mm5:checked ~ ul.options li:nth-of-type(5) label.close,
+.metroMenu #mm6:checked ~ ul.options li:nth-of-type(6) label.close,
+.metroMenu #mm7:checked ~ ul.options li:nth-of-type(7) label.close,
+.metroMenu #mm8:checked ~ ul.options li:nth-of-type(8) label.close {display:block;}
+
+.metroMenu div.panels {width:600px; height:390px; background:#fff; position:absolute; left:300px; top:0px; background:#eee; overflow:hidden; display:none;}
+.metroMenu div.panels div.contentPane {width:560px; height:350px; padding:20px; margin-top:0; overflow-x:auto;
+-webkit-transition:0.5s;
+-o-transition:0.5s;
+transition:0.5s;
+}
+
+/* Chrome/Safari scroll bar styling */
+.metroMenu div.panels div::-webkit-scrollbar {
+width: 25px;
+background: #f80;
+}
+.metroMenu div.panels div::-webkit-scrollbar-thumb {
+background: #056;
+}
+
+/* IE8+ scroll bar styles */
+.metroMenu div.panels div.contentPane {
+-ms-scrollbar-base-color:#f80; 
+-ms-scrollbar-3dlight-color:#056;
+-ms-scrollbar-arrow-color:#056;
+-ms-scrollbar-darkshadow-color:#056;
+-ms-scrollbar-face-color:#056;
+-ms-scrollbar-highlight-color:#056;
+-ms-scrollbar-shadow-color:#056;
+-ms-scrollbar-track-color:#f80;
+/* IE10 Touch screen scrolling */
+-ms-scroll-snap-points-y:snapInterval(0px, 10px);
+-ms-scroll-snap-type:mandatory;
+-ms-scroll-chaining:none;
+}
+
+.metroMenu .panels div:first-child {margin-top:390px;}
+
+.metroMenu input:checked ~ div.panels {display:block;}
+.metroMenu #mmClose:checked ~ div.panels {display:none;}
+
+#mm1:checked ~ .panels div.contentPane:first-child {margin-top:0;}
+#mm2:checked ~ .panels div.contentPane:first-child {margin-top:-390px;}
+#mm3:checked ~ .panels div.contentPane:first-child {margin-top:-780px;}
+#mm4:checked ~ .panels div.contentPane:first-child {margin-top:-1170px;}
+#mm5:checked ~ .panels div.contentPane:first-child {margin-top:-1560px;}
+#mm6:checked ~ .panels div.contentPane:first-child {margin-top:-1950px;}
+#mm7:checked ~ .panels div.contentPane:first-child {margin-top:-2340px;}
+#mm8:checked ~ .panels div.contentPane:first-child {margin-top:-2730px;}
+
+.metroMenu .panels div.contentPane:nth-of-type(1) {background:#5ca0f1;}
+.metroMenu .panels div.contentPane:nth-of-type(2) {background:#b37;}
+.metroMenu .panels div.contentPane:nth-of-type(3) {background:#a05c92;}
+.metroMenu .panels div.contentPane:nth-of-type(4) {background:#ffa033;}
+.metroMenu .panels div.contentPane:nth-of-type(5) {background:#f14133;}
+.metroMenu .panels div.contentPane:nth-of-type(6) {background:#418569;}
+.metroMenu .panels div.contentPane:nth-of-type(7) {background:#4e4e4e;}
+.metroMenu .panels div.contentPane:nth-of-type(8) {background:#adad33;}
+
+#info .metroMenu div.panels div.contentPane h1 {padding:8px 0; margin:0; font:400 40px/45px 'PT Sans', arial, sans-serif; color:#fff;}
+#info .metroMenu div.panels div.contentPane h2 {padding:8px 0; margin:0; font:400 25px/30px 'PT Sans', arial, sans-serif; color:#fff;}
+#info .metroMenu div.panels div.contentPane p {padding:8px 0; margin:0; font:400 16px/20px 'PT Sans', arial, sans-serif; color:#fff;}
+
+.metroMenu .imgCenter {display:block; margin:50px auto;}
+
+.metroMenu #mmClose:checked ~ ul.options li label.close {display:none;}
+.metroMenu #mmClose:checked ~ div.panels {display:none;}
+
+
+/* form */
+.metroMenu .panels div.contentPane form {padding:50px 0 0 150px; margin:0; width:300px;}
+.metroMenu .panels div.contentPane form label {display:block; width:80px; float:left; clear:left; font:400 16px/40px 'PT Sans', arial, sans-serif; color:#fff;}
+.metroMenu .panels div.contentPane form input.ipt {display:block; width:150px; float:left; border:0; padding:10px;}
+.metroMenu .panels div.contentPane form input.submit {display:block; clear:left; margin-left:80px; border:0; background:#990; padding:10px 20px; font:400 16px/20px 'PT Sans', arial, sans-serif; color:#fff;}
+
+/* gallery */
+.metroMenu .radiogallery {position:relative; padding:0; margin:10px auto; width:224px; height:30px; padding:160px 10px 10px 10px; background:#f80;}
+.metroMenu .radiogallery input {position:absolute; left:-9999px;}
+.metroMenu .radiogallery label {display:block; width:28px; height:28px; margin:2px; float:left; background:#38e; text-align:center; cursor:pointer; font:400 11px/26px 'PT Sans', arial, sans-serif; position:relative; color:#fff;}
+
+.metroMenu .radiogallery div {position:absolute; left:10px; top:5px; width:224px; height:150px; text-align:center; opacity:0; filter: alpha(opacity=0);
+-webkit-transition:1s;
+-moz-transition:1s;
+-ms-transition:1s;
+-o-transition:1s;
+transition:1s;
+}
+.metroMenu .radiogallery input:checked + label {background-color:#164;}
+.metroMenu .radiogallery label:hover {background:#164;}
+
+.metroMenu .radiogallery input#pic1:checked ~ div.pic1,
+.metroMenu .radiogallery input#pic2:checked ~ div.pic2,
+.metroMenu .radiogallery input#pic3:checked ~ div.pic3,
+.metroMenu .radiogallery input#pic4:checked ~ div.pic4,
+.metroMenu .radiogallery input#pic5:checked ~ div.pic5,
+.metroMenu .radiogallery input#pic6:checked ~ div.pic6,
+.metroMenu .radiogallery input#pic7:checked ~ div.pic7 {opacity:1; filter: alpha(opacity=100);}
+
+/* calendar */
+.metroMenu .calendar {margin:10px auto 0 auto;}
+.metroMenu .calendar caption,
+.metroMenu .calendar tfoot tr td {font:400 16px/26px 'PT Sans', arial, sans-serif; color:#fff; text-align:center;}
+.metroMenu .calendar thead tr th {font:400 14px/24px 'PT Sans', arial, sans-serif; color:#fff; background:#38e; text-align:center; width:30px; margin:2px; text-align:center;}
+.metroMenu .calendar tbody tr td {font:400 14px/24px 'PT Sans', arial, sans-serif; color:#fff; background:#164; text-align:center; width:30px; margin:2px; text-align:center;}

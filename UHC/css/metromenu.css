@@ -1,0 +1,161 @@
+/* ================================================================ 
+This copyright notice must be kept untouched in the stylesheet at 
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/cssplay-metroMenu1.html
+Copyright (c) Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+.container1 {width:300px; height:400px; margin:60px 0;left:60px;top:100px; -webkit-tap-highlight-color: rgba(0,0,0,0); position:relative; z-index:100;}
+.metroMenu1 {width:300px; height:400px; position:relative;}
+.metroMenu1 ul.options {padding:0; margin:0; list-style:none; width:300px; height:400px; overflow:hidden;}
+.metroMenu1 ul.options li {float:left; margin:0 10px 10px 0}
+.metroMenu1 input.metro {display:none; position:absolute;}
+.metroMenu1 label.metro,
+.metroMenu1 label.metro + label {display:block; position:relative; width:100%; height:100%; cursor:pointer;}
+.metroMenu1 .s11 {width:90px; height:90px;}
+.metroMenu1 .s21 {width:190px; height:90px;}
+.metroMenu1 .s22 {width:190px; height:190px;}
+
+.metroMenu1 label.metro span {display:block; width:100%; position:absolute; left:0; bottom:0; font:400 11px/25px 'PT Sans', arial, sans-serif; color:#fff; text-indent:10px;}
+
+
+.metroMenu1 ul.options li label.close {display:none; background:rgba(255,255,255,0.2) url(../img/selected.png) no-repeat right top; margin-top:-90px;}
+.metroMenu1 ul.options li.s22 label.close {margin-top:-190px;}
+
+.metroMenu1 ul.options li:nth-of-type(1) {background:#38e url(../img/student_group.png) no-repeat center 40px;}
+.metroMenu1 ul.options li:nth-of-type(2) {background:#a05 url(../img/birthday.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(3) {background:#837 url(../img/announcement.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(4) {background:#f80 url(../img/followup.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(5) {background:#e10 url(../img/reminder.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(6) {background:#090 url(../img/report.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(7) {background:#222 url(../img/message.png) no-repeat center 0px;}
+.metroMenu1 ul.options li:nth-of-type(8) {background:#990 url(../img/settings.png) no-repeat center 0px;}
+
+.metroMenu1 #mm1:not(:checked) ~ ul.options li:nth-of-type(1):hover label:first-child:before,
+.metroMenu1 #mm2:not(:checked) ~ ul.options li:nth-of-type(2):hover label:first-child:before,
+.metroMenu1 #mm3:not(:checked) ~ ul.options li:nth-of-type(3):hover label:first-child:before,
+.metroMenu1 #mm4:not(:checked) ~ ul.options li:nth-of-type(4):hover label:first-child:before,
+.metroMenu1 #mm5:not(:checked) ~ ul.options li:nth-of-type(5):hover label:first-child:before,
+.metroMenu1 #mm6:not(:checked) ~ ul.options li:nth-of-type(6):hover label:first-child:before,
+.metroMenu1 #mm7:not(:checked) ~ ul.options li:nth-of-type(7):hover label:first-child:before,
+.metroMenu1 #mm8:not(:checked) ~ ul.options li:nth-of-type(8):hover label:first-child:before {content:""; display:block; width:100%; height:100%; background:rgba(255,255,255,0.2); position:absolute; left:0; top:0;}
+
+.metroMenu1 #mm1:checked ~ ul.options li:nth-of-type(1) label.close,
+.metroMenu1 #mm2:checked ~ ul.options li:nth-of-type(2) label.close,
+.metroMenu1 #mm3:checked ~ ul.options li:nth-of-type(3) label.close,
+.metroMenu1 #mm4:checked ~ ul.options li:nth-of-type(4) label.close,
+.metroMenu1 #mm5:checked ~ ul.options li:nth-of-type(5) label.close,
+.metroMenu1 #mm6:checked ~ ul.options li:nth-of-type(6) label.close,
+.metroMenu1 #mm7:checked ~ ul.options li:nth-of-type(7) label.close,
+.metroMenu1 #mm8:checked ~ ul.options li:nth-of-type(8) label.close {display:block;}
+
+.metroMenu1 div.panels {width:800px; height:390px; background:#fff; position:absolute; left:300px; top:0px; background:#eee; overflow:hidden; display:none;}
+.metroMenu1 div.panels div.contentPane {width:760px; height:350px; padding:20px; margin-top:0; overflow-x:auto;
+-webkit-transition:0.5s;
+-o-transition:0.5s;
+transition:0.5s;
+
+}
+
+/* Chrome/Safari scroll bar styling */
+.metroMenu1 div.panels div::-webkit-scrollbar {
+width: 10px;
+background: #f80;
+}
+.metroMenu1 div.panels div::-webkit-scrollbar-thumb {
+background: #056;
+}
+
+/* IE8+ scroll bar styles */
+.metroMenu1 div.panels div.contentPane {
+-ms-scrollbar-base-color:#f80; 
+-ms-scrollbar-3dlight-color:#056;
+-ms-scrollbar-arrow-color:#056;
+-ms-scrollbar-darkshadow-color:#056;
+-ms-scrollbar-face-color:#056;
+-ms-scrollbar-highlight-color:#056;
+-ms-scrollbar-shadow-color:#056;
+-ms-scrollbar-track-color:#f80;
+/* IE10 Touch screen scrolling */
+-ms-scroll-snap-points-y:snapInterval(0px, 10px);
+-ms-scroll-snap-type:mandatory;
+-ms-scroll-chaining:none;
+}
+
+.metroMenu1 .panels div:first-child {margin-top:390px;}
+
+.metroMenu1 input:checked ~ div.panels {display:block;
+
+}
+.metroMenu1 #mmClose:checked ~ div.panels {display:none;}
+
+#mm1:checked ~ .panels div.contentPane:first-child {margin-top:0;}
+#mm2:checked ~ .panels div.contentPane:first-child {margin-top:-390px;}
+#mm3:checked ~ .panels div.contentPane:first-child {margin-top:-780px;}
+#mm4:checked ~ .panels div.contentPane:first-child {margin-top:-1170px;}
+#mm5:checked ~ .panels div.contentPane:first-child {margin-top:-1560px;}
+#mm6:checked ~ .panels div.contentPane:first-child {margin-top:-1950px;}
+#mm7:checked ~ .panels div.contentPane:first-child {margin-top:-2340px;}
+#mm8:checked ~ .panels div.contentPane:first-child {margin-top:-2730px;}
+
+.metroMenu1 .panels div.contentPane:nth-of-type(1) {background:#000 url(../img/header_bg.gif);}
+.metroMenu1 .panels div.contentPane:nth-of-type(2) {background:#000 url(../img/wallpaper1.jpg);}
+.metroMenu1 .panels div.contentPane:nth-of-type(3) {background:#000 url(../img/wallpaper.jpg);}
+.metroMenu1 .panels div.contentPane:nth-of-type(4) {background:#000 url(../img/matrix.gif);}
+.metroMenu1 .panels div.contentPane:nth-of-type(5) {background:#000 url(../img/wallgreen1.jpg)}
+.metroMenu1 .panels div.contentPane:nth-of-type(6) {background:#000 url(../img/red_texture.jpg);}
+.metroMenu1 .panels div.contentPane:nth-of-type(7) {background:#000 url(../img/wallpaper2.jpg);}
+.metroMenu1 .panels div.contentPane:nth-of-type(8) {background:#000 url(../img/wallsky.gif);}
+
+#info .metroMenu1 div.panels div.contentPane h1 {padding:8px 0; margin:0; font:400 40px/45px 'PT Sans', arial, sans-serif; color:#fff;}
+#info .metroMenu1 div.panels div.contentPane h2 {padding:8px 0; margin:0; font:400 25px/30px 'PT Sans', arial, sans-serif; color:#fff;}
+#info .metroMenu1 div.panels div.contentPane p {padding:8px 0; margin:0; font:400 16px/20px 'PT Sans', arial, sans-serif; color:#fff;}
+
+.metroMenu1 .imgCenter {display:block; margin:50px auto;}
+
+.metroMenu1 #mmClose:checked ~ ul.options li label.close {display:none;}
+.metroMenu1 #mmClose:checked ~ div.panels {display:none;}
+
+
+/* form */
+/*
+.metroMenu1 .panels div.contentPane form {padding:50px 0 0 150px; margin:0; width:300px;}
+.metroMenu1 .panels div.contentPane form label {display:block; width:80px; float:left; clear:left; font:400 16px/40px 'PT Sans', arial, sans-serif; color:#fff;}
+.metroMenu1 .panels div.contentPane form input.ipt {display:block; width:150px; float:left; border:0; padding:10px;}
+.metroMenu1 .panels div.contentPane form input.submit {display:block; clear:left; margin-left:80px; border:0; background:#990; padding:10px 20px; font:400 16px/20px 'PT Sans', arial, sans-serif; color:#fff;}
+*/
+/* gallery */
+/*
+.metroMenu1 .radiogallery {position:relative; padding:0; margin:10px auto; width:224px; height:30px; padding:160px 10px 10px 10px; background:#f80;}
+.metroMenu1 .radiogallery input {position:absolute; left:-9999px;}
+.metroMenu1 .radiogallery label {display:block; width:28px; height:28px; margin:2px; float:left; background:#38e; text-align:center; cursor:pointer; font:400 11px/26px 'PT Sans', arial, sans-serif; position:relative; color:#fff;}
+
+.metroMenu1 .radiogallery div {position:absolute; left:10px; top:5px; width:224px; height:150px; text-align:center; opacity:0; filter: alpha(opacity=0);
+-webkit-transition:1s;
+-moz-transition:1s;
+-ms-transition:1s;
+-o-transition:1s;
+transition:1s;
+}
+.metroMenu1 .radiogallery input:checked + label {background-color:#090;}
+.metroMenu1 .radiogallery label:hover {background:#090;}
+
+.metroMenu1 .radiogallery input#pic1:checked ~ div.pic1,
+.metroMenu1 .radiogallery input#pic2:checked ~ div.pic2,
+.metroMenu1 .radiogallery input#pic3:checked ~ div.pic3,
+.metroMenu1 .radiogallery input#pic4:checked ~ div.pic4,
+.metroMenu1 .radiogallery input#pic5:checked ~ div.pic5,
+.metroMenu1 .radiogallery input#pic6:checked ~ div.pic6,
+.metroMenu1 .radiogallery input#pic7:checked ~ div.pic7 {opacity:1; filter: alpha(opacity=100);}
+*/
+/* calendar */
+/*
+.metroMenu1 .calendar {margin:10px auto 0 auto;}
+.metroMenu1 .calendar caption,
+.metroMenu1 .calendar tfoot tr td {font:400 16px/26px 'PT Sans', arial, sans-serif; color:#fff; text-align:center;}
+.metroMenu1 .calendar tbody tr td {font:400 14px/24px 'PT Sans', arial, sans-serif; color:#fff; background:#005C1F; text-align:center; width:30px; margin:2px; text-align:center;}
+.metroMenu1 .calendar thead tr th {font:400 14px/24px 'PT Sans', arial, sans-serif; color:#fff; background:#38e; text-align:center; width:30px; margin:2px; text-align:center;}
+*/

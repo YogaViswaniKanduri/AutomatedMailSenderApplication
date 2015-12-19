@@ -1,0 +1,167 @@
+/*================================================
+User1.css
+
+designed for creating styles for windows tiles
+=================================================*/
+@import "http://fonts.googleapis.com/css?family=Raleway";
+
+.birthdayWishes1,.feedback1, .appReminder1
+{
+	margin-top:0px;
+	position:relative;
+	width:550px;
+	height:350px;
+	margin-left:0px;
+	padding:20px;
+	background-color:#EEE;
+	color:#333;
+	float:left;
+	font-family:'Raleway',sans-serif;
+	border:2px solid #C2D6FF;
+	border-radius:30px 0 30px 0;
+}
+
+.makeAnnouncement1, .genReports1, .gensentmailReports
+{
+	margin-top:0px;
+	position:relative;
+	width:1020px;
+	height:auto;
+	margin-left:0px;
+	padding:20px;
+	background-color:#EEE;
+	color:#333;
+	float:left;
+	font-family:'Raleway',sans-serif;
+	border:2px solid #C2D6FF;
+	border-radius:30px 0 30px 0;
+}
+
+.birthdayWishes1 label,.feedback1 label, .appReminder1 label
+{	
+	font-size:15px;
+	line-height:30px;
+	font-weight:700;
+}
+
+.makeAnnouncement1 label, .genReports1 label, .gensentmailReports label
+{
+	font-size:15px;
+	line-height:30px;
+	font-weight:700;
+}
+
+.birthdayWishes1 #bdwishtype1,
+.birthdayWishes1 #bdtemplate1,
+.feedback1 #feedbackVisitedOn,
+.appReminder1 #remindertime1
+{
+	border:1px solid #DADADA;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-left:35px;
+	width:310px;
+	height:30px;
+	font-size:14px;
+	box-shadow:0 0 10px;
+	-webkit-box-shadow:0 0 10px;
+	/* For I.E */
+	-moz-box-shadow:0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	/* For I.E */
+	-moz-border-radius:5px
+	/* For Mozilla Web Browser */
+}
+
+.makeAnnouncement1 #annSubject
+{
+	border:1px solid #DADADA;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-left:20px;
+	width:1000px;
+	height:20px;
+	font-size:14px;
+	box-shadow:0 0 10px;
+	-webkit-box-shadow:0 0 10px;
+	/* For I.E */
+	-moz-box-shadow:0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	/* For I.E */
+	-moz-border-radius:5px
+	/* For Mozilla Web Browser */
+}
+
+.makeAnnouncement1 #annBody
+{
+	border:1px solid #DADADA;
+	margin-top:0px;
+	margin-bottom:10px;
+	padding-left:20px;
+	width:1000px;
+	height:130px;
+	font-size:14px; 
+	box-shadow:0 0 10px;
+	-webkit-box-shadow:0 0 10px;
+	/* For I.E */
+	-moz-box-shadow:0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	/* For I.E */
+	-moz-border-radius:5px
+	/* For Mozilla Web Browser */
+}
+
+
+
+
+.birthdayWishes1 input#submit,
+.feedback1 input#submit , 
+.appReminder1 input#submit,
+.makeAnnouncement1 input#submit, 
+.genReports1 input#submit,
+.gensentmailReports input#submit
+{
+background-color:#191919;
+border-radius:5px;
+border:none;
+padding:10px 25px;
+color:#FFF;
+margin-top:10px;
+text-shadow:1px 1px 1px #949494;
+margin-left:80px;
+}
+.birthdayWishes1 input#submit:hover, 
+.feedback1 input#submit:hover,
+.appReminder1 input#submit:hover,
+.makeAnnouncement1 input#submit:hover,
+.genReports1 input#submit:hover,
+.gensentmailReports input#submit:hover{
+background-color:#F30;
+}
+
+#emailTemplateViewer1
+{
+	display:none;
+	width:400px;
+	height:390px;	
+	margin-top:0px;
+	margin-left:600px;
+	position:relative;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+
+

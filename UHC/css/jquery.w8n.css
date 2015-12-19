@@ -1,0 +1,37 @@
+.w8n-container {                
+    padding: 0; 
+    margin: 0; 
+    display: block;
+    position: fixed; 
+}
+
+.top { top: 75%; }
+.right { right: 0px; }
+
+.w8n-box { 
+    width: 435px; 
+    height: 70px;               
+    position: relative;
+    display: none;
+    overflow: hidden; 
+    
+    background-color: #A4C400;
+    color: #FFF;
+
+    margin-bottom: 10px;                
+    padding-left: 15px;
+    float: right;
+    clear: right; 
+
+    font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+}
+
+.w8n-box .title {
+    font-size: 20px;
+	margin-top:5px;
+}
+
+.w8n-box .message {
+    font-size: 14px;
+	margin-top:5px;
+}

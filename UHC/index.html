@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>University Health Centre</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/magic.css">
+<link rel="stylesheet" type="text/css" href="css/magic.min.css">
+<link rel="stylesheet" type="text/css" href="css/user.css">
+<!--
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/User.js"></script>
+<script src="js/jquery.min.js"></script>
+-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<style>
+.metro-form-control .metro-text-box input[type=password]{background:#d2d2d2;border:2px #d2d2d2 solid;color:#646464;border-radius:0;font-size:11pt;padding:5px 8px;width:100%;outline:0;display:inline-block;}
+.metro-form-control .metro-text-box input[type=password]:focus{background:#fff;border-color:#fff;color:#000;}
+.metro-form-control .metro-text-box input[type=password]:disabled{background:#1d1d1d;border:2px #777777 solid;}
+.metro-form-control .metro-text-box input[type=password]:not(:focus):not(:disabled):hover{background:#e2e2e2;}
+.metro-form-control .metro-text-box input[type=password]+.helper::before{display:inline-block;position:absolute;width:16px;height:16px;background:#ccc;top:3px;right:-17px;visibility:hidden;content:"\00d7";font-size:18pt;font-weight:bold;color:#000;cursor:pointer;padding:2px 6px 9px 6px;}
+.metro-form-control .metro-text-box input[type=password]:focus+.helper::before{visibility:visible;}
+.metro-form-control .metro-text-box:hover input[type=password]+.helper:before{background:#dedede !important;}
+.metro-form-control .metro-text-box:action input[type=password]+.helper:before{background:#000 !important;}
+.metro-button{text-decoration:none;border:2px #e2e2e2 solid;padding:5px 20px;margin:10px 10px 0 0px;color:#fff !important;background:#1d1d1d;cursor:pointer;min-width:50px;display:inline-block;position:relative;text-align:center;border-radius:0;}.metro-button:hover{background:#3a3a3a;}
+.metro-button.default:hover{background:#219297;}
+.metro-button:active{background:#ffffff;color:#1d1d1d !important;top:2px;left:2px;}
+
+</style>
+</head>
+<body style="background:url(img/background.jpg)">
+<table style="left:30%;top:20%;position:absolute;width:700px;height:200px;">
+<tr>
+<td>
+<img src="img/login.png" style="border: 7px solid rgba(00, 102, 00, .5);border-radius:5px;width:150px;height:150px;" />
+</td>
+<td>
+<div style="width:500px;height:150px;">
+<h1 style="left:10px;position:relative;color:#fff;">Kalyan Kanduri</h1>
+<h4 style="left:10px;top:-15px;position:relative;color:#fff;"><i>Kandurikalyan@gmail.com</i></h4>
+<form class="metro-form" ng-app="" method="post" ng-submit="submit()" ng-controller="LoginUHCController" style="position:relative;top:-10px;">
+  <div class="metro-form-control" style="width: 300px;left:10px;position:relative;top:-10px;">
+	<div class="metro-text-box">
+		<input name="password" id="password" ng-model="password" type="password" placeHolder="Password" style="float:left;position:relative;" />
+		<!--<span class="helper"></span>-->
+	</div>
+	<input type="Submit" Class="metro-button" value="Submit" />
+  </div>
+</form>
+</div>
+</td>
+</tr>
+</table>
+<a href="http://www.google.com" style="text-decoration:none;left:95%;top:90%;position:absolute;"><img src="img/power.png" width="50px" height="50px;"/></a>
+
+<!--
+<div id="testbox" style="top:50%;position:absolute;">
+				<div id="timing" class="perspective"><span class="icon-diamond"><img src="img/bag6.png"/></span></div>
+			</div>
+<div id="cssoptions">
+<a rel="nofollow" class="btn" data-test='bombRightOut'>spaceInLeft</a>
+</div>
+-->
+<script>
+function LoginUHCController($scope) {
+	
+    $scope.submit = function() {
+        if ($scope.password=='UHCAdmin') {
+         window.location = "home.php";		 
+        }
+		else{
+			document.getElementById('password').style.borderColor = "red";
+		}
+      };
+}
+</script>
+</body>
+</html>
